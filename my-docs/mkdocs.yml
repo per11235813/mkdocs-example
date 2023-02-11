@@ -1,0 +1,30 @@
+site_name: Per's python docs
+site_description: Personal experiments with python
+
+theme:
+  name: 'material'
+  palette:
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: blue
+    accent: blue
+ 
+
+nav:
+- Overview: index.md
+- hello: hello-reference.md
+- Git Notes: git_notes.md
+- A chart notebook: psje.md
+
+plugins:
+  - mkdocstrings
+  - autorefs
+
+markdown_extensions:
+- mdx_include:
+    base_path: docs
+- pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
